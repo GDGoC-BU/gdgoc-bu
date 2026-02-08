@@ -23,9 +23,9 @@ const bgColorClassNames = [
 
 export default function Home() {
   return (
-    <div className='grid min-h-screen place-items-center'>
+    <div className='grid min-h-screen place-items-center font-sans'>
       <div className='flex h-fit w-fit flex-col items-center gap-12 rounded-2xl border-2 p-12'>
-        <h1 className='text-3xl'>Core Colors</h1>
+        <h1 className='text-3xl font-[550]'>Core Colors</h1>
         <div className='flex flex-row gap-6'>
           {bgColorClassNames.map((color, index) => {
             return (
