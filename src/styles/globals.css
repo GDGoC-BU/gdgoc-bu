@@ -2,27 +2,53 @@
 
 .light {
   --background: #ffffff;
-  --foreground: #171717;
-  --muted: #bfbfbf;
-  --border: #bfbfbf;
-  --border: #e5e5e5;
+  --foreground: #1e1e1e;
+  --border: #1e1e1e;
+
+  --core-black-100: #f0f0f0;
+  --core-black-200: #1e1e1e;
+  --core-blue-100: #c3ecf6;
+  --core-blue-200: #57caff;
+  --core-blue-300: #4285f4;
+  --core-green-100: #ccf6c5;
+  --core-green-200: #5cdb6d;
+  --core-green-300: #34a853;
+  --core-yellow-100: #ffe7a5;
+  --core-yellow-200: #ffd427;
+  --core-yellow-300: #f9ab00;
+  --core-red-100: #f8d8d8;
+  --core-red-200: #ff7daf;
+  --core-red-300: #ea4335;
 }
 
 .dark {
+  /* Website doesnt really have dark mode. But, in the future
+  if there will be a dark mode version, add the dark styles here. */
   --background: #171717;
   --foreground: #ffffff;
 }
 
 @theme inline {
-}
-
-@theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-muted: var(--muted);
+
+  --color-core-black-100: var(--core-black-100);
+  --color-core-black-200: var(--core-black-200);
+  --color-core-blue-100: var(--core-blue-100);
+  --color-core-blue-200: var(--core-blue-200);
+  --color-core-blue-300: var(--core-blue-300);
+  --color-core-green-100: var(--core-green-100);
+  --color-core-green-200: var(--core-green-200);
+  --color-core-green-300: var(--core-green-300);
+  --color-core-yellow-100: var(--core-yellow-100);
+  --color-core-yellow-200: var(--core-yellow-200);
+  --color-core-yellow-300: var(--core-yellow-300);
+  --color-core-red-100: var(--core-red-100);
+  --color-core-red-200: var(--core-red-200);
+  --color-core-red-300: var(--core-red-300);
+
+  /* --color-muted: var(--muted); */
   --color-border: var(--border);
-  /* --font-body: var(--font-inter);
-  --font-heading: var(--font-nunito); */
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
