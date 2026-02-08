@@ -1,3 +1,10 @@
+import {
+  TextBody,
+  TextSubheading,
+  TextDisplay,
+  TextHeading
+} from '@/components/text';
+
 const bgColorClassNames = [
   {
     name: 'Black',
@@ -23,9 +30,18 @@ const bgColorClassNames = [
 
 export default function Home() {
   return (
-    <div className='grid min-h-screen place-items-center font-sans'>
-      <div className='flex h-fit w-fit flex-col items-center gap-12 rounded-2xl border-2 p-12'>
-        <h1 className='text-3xl font-[550]'>Core Colors</h1>
+    <div className='mx-auto flex min-h-screen w-full max-w-[1200px] flex-col items-center gap-20 py-20'>
+      <div className='flex h-fit w-full flex-col items-center rounded-2xl border-2 p-12 text-center'>
+        <TextDisplay className='mb-2'>Typography Scale</TextDisplay>
+        <TextHeading className='mb-4'>Heading</TextHeading>
+        <TextSubheading className='max-w-[500px]'>Subheading</TextSubheading>
+        <TextBody className='max-w-[500px]'>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </TextBody>
+      </div>
+      <div className='flex h-fit w-full flex-col items-center gap-12 rounded-2xl border-2 p-12'>
+        <TextHeading>Core Colors</TextHeading>
         <div className='flex flex-row gap-6'>
           {bgColorClassNames.map((color, index) => {
             return (
@@ -34,7 +50,7 @@ export default function Home() {
                 className='flex flex-col items-center'
               >
                 <div className='mb-4'>
-                  <p className='text-2xl'>{color.name}</p>
+                  <TextSubheading>{color.name}</TextSubheading>
                 </div>
                 <div className='flex flex-col gap-6'>
                   {color.colors.map(bgColor => {
@@ -47,7 +63,7 @@ export default function Home() {
                           key={index + bgColor}
                           className={`size-[100px] rounded-full ` + bgColor}
                         />
-                        <p className='text-base'>{bgColor}</p>
+                        <TextBody>{bgColor}</TextBody>
                       </div>
                     );
                   })}
