@@ -50,7 +50,7 @@
   /* --color-muted: var(--muted); */
   --color-border: var(--border);
 
-  --font-sans: var(--font-google-sans);
+  --font-sans: var(--font-google-sans-flex);
 }
 
 body {

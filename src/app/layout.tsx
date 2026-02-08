@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
-import { Google_Sans } from 'next/font/google';
+import { Google_Sans_Flex } from 'next/font/google';
 import '@/styles/globals.css';
 
-const googleSans = Google_Sans({
-  variable: '--font-google-sans',
+const googleSansFlex = Google_Sans_Flex({
+  variable: '--font-google-sans-flex',
   subsets: ['latin'],
   weight: 'variable',
-  style: ['normal', 'italic']
+  style: ['normal']
 });
 
 export const metadata: Metadata = {
@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${googleSans.variable} light antialiased`}>
+      <body className={`${googleSansFlex.variable} light antialiased`}>
         {children}
       </body>
     </html>
