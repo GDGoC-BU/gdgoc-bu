@@ -4,12 +4,27 @@
 /*                         README                         */
 /* ======================================================= */
 
-/* brand-* classes:
+/* SETUP
+
+   Define custom tokens/variables in the .light and .dark class. These variabless will be 
+   used in the @theme directive below for tailwind to know the value for the the custom
+   classes. .light and .dark tokens should always match, If a variable was added to .light,
+   add it to .dark. The "light" or "dark" class will be used in the root layout (@/app/layout.tsx)
+   where it can be toggled between each other. Depending on what class is applied to the root, the variables defined inside that class will be used to evaluate the tailwind values.
+
+   @theme directive has a set of defined variable namespaces to create custom classes.
+   Read more about it at: "https://tailwindcss.com/docs/theme#theme-variable-namespaces"
+
+  brand-* classes:
    - reusable classes that hold the branding values
    - encode global brand design decisions
    - should be usable anywhere
-   - should remain few and stable
-*/
+   - should remain few and stable 
+   
+   Classes defined in @layer utilities are class combinations. Use them, don't recreate your
+   own. Structure related styles can such as padding, display, margins, etc. shall be taken from
+   the default tailwind classes, but branding related styles such as colors should be taken from
+   the custom classes. This allows us to easily change styles in the future, without code hunting.  */
 
 /* ======================================================= */
 
@@ -35,8 +50,8 @@
 }
 
 .dark {
-  /* Website doesnt really have dark mode. But, in the future
-  if there will be a dark mode version, add the dark styles here. */
+  /* Website doesnt really have dark mode. But, in the future if there will be a
+     dark mode version, copy the variables in .light and replace the values respectively */
   --background: #171717;
   --foreground: #ffffff;
 }
@@ -67,10 +82,19 @@
 }
 
 @layer utilities {
+  /* Use on any components that has a border.
+  
+     NOTE: This applies a border on all sides. If you want to not 
+     apply a border on a specific side, specify it directly. 
+     
+     E.g: ".brand-border border-x-0! border-t-0!" 
+ 
+     Code above only applies the brand border at the bottom of the element. */
   .brand-border {
     @apply border-brand-black-200 border-2;
   }
 
+  /* Width cap on certain sections */
   .brand-width-container {
     @apply mx-auto w-full max-w-[1400px] px-4;
   }

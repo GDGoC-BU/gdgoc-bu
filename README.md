@@ -186,6 +186,8 @@ type(scope): short description
   a page to test the component. After completing the component, take a
   screenshot of the component and remove it from the page. Attach screenshot in
   the PR so maintainers can immediately see the component visually.
+- Review the @/styles/globals.css to see the custom tailwind classes and read
+  through its README
 
 ---
 
