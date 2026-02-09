@@ -1,24 +1,36 @@
 @import 'tailwindcss';
 
+/* ======================================================= *
+/*                         README                         */
+/* ======================================================= */
+
+/* brand-* utilities:
+   - encode global brand design decisions
+   - should be usable anywhere
+   - should remain few and stable
+*/
+
+/* ======================================================= */
+
 .light {
   --background: #ffffff;
   --foreground: #1e1e1e;
   --border: #1e1e1e;
 
-  --core-black-100: #f0f0f0;
-  --core-black-200: #1e1e1e;
-  --core-blue-100: #c3ecf6;
-  --core-blue-200: #57caff;
-  --core-blue-300: #4285f4;
-  --core-green-100: #ccf6c5;
-  --core-green-200: #5cdb6d;
-  --core-green-300: #34a853;
-  --core-yellow-100: #ffe7a5;
-  --core-yellow-200: #ffd427;
-  --core-yellow-300: #f9ab00;
-  --core-red-100: #f8d8d8;
-  --core-red-200: #ff7daf;
-  --core-red-300: #ea4335;
+  --brand-black-100: #f0f0f0;
+  --brand-black-200: #1e1e1e;
+  --brand-blue-100: #c3ecf6;
+  --brand-blue-200: #57caff;
+  --brand-blue-300: #4285f4;
+  --brand-green-100: #ccf6c5;
+  --brand-green-200: #5cdb6d;
+  --brand-green-300: #34a853;
+  --brand-yellow-100: #ffe7a5;
+  --brand-yellow-200: #ffd427;
+  --brand-yellow-300: #f9ab00;
+  --brand-red-100: #f8d8d8;
+  --brand-red-200: #ff7daf;
+  --brand-red-300: #ea4335;
 }
 
 .dark {
@@ -32,25 +44,31 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
-  --color-core-black-100: var(--core-black-100);
-  --color-core-black-200: var(--core-black-200);
-  --color-core-blue-100: var(--core-blue-100);
-  --color-core-blue-200: var(--core-blue-200);
-  --color-core-blue-300: var(--core-blue-300);
-  --color-core-green-100: var(--core-green-100);
-  --color-core-green-200: var(--core-green-200);
-  --color-core-green-300: var(--core-green-300);
-  --color-core-yellow-100: var(--core-yellow-100);
-  --color-core-yellow-200: var(--core-yellow-200);
-  --color-core-yellow-300: var(--core-yellow-300);
-  --color-core-red-100: var(--core-red-100);
-  --color-core-red-200: var(--core-red-200);
-  --color-core-red-300: var(--core-red-300);
+  --color-brand-black-100: var(--brand-black-100);
+  --color-brand-black-200: var(--brand-black-200);
+  --color-brand-blue-100: var(--brand-blue-100);
+  --color-brand-blue-200: var(--brand-blue-200);
+  --color-brand-blue-300: var(--brand-blue-300);
+  --color-brand-green-100: var(--brand-green-100);
+  --color-brand-green-200: var(--brand-green-200);
+  --color-brand-green-300: var(--brand-green-300);
+  --color-brand-yellow-100: var(--brand-yellow-100);
+  --color-brand-yellow-200: var(--brand-yellow-200);
+  --color-brand-yellow-300: var(--brand-yellow-300);
+  --color-brand-red-100: var(--brand-red-100);
+  --color-brand-red-200: var(--brand-red-200);
+  --color-brand-red-300: var(--brand-red-300);
 
   /* --color-muted: var(--muted); */
   --color-border: var(--border);
 
   --font-sans: var(--font-google-sans-flex);
+}
+
+@layer utilities {
+  .brand-border {
+    @apply border-brand-black-200 border-2;
+  }
 }
 
 body {
