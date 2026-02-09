@@ -156,6 +156,7 @@ type(scope): short description
 - feat(button): add button component
 - fix(officer-profile): fix header alignment
 - chore(tailwind): add color-brand-\* classes
+- feat(layout): add navbar
 
 ---
 
@@ -186,8 +187,15 @@ type(scope): short description
   a page to test the component. After completing the component, take a
   screenshot of the component and remove it from the page. Attach screenshot in
   the PR so maintainers can immediately see the component visually.
-- Review the @/styles/globals.css to see the custom tailwind classes and read
+- Review the` @/styles/globals.css` to see the custom tailwind classes and read
   through its README
+- Review the `@/app` structure. Sections of a page will be separated into their
+  own component/file and used in that page. The page component SHOULD stay lean
+  and orchestrate its sections. Sub-components of sections that are only used in
+  that section shall be placed inside its section folder. E.g:
+  `@/app/about-us/_sections/officer-directory/officer-profile.tsx`. If a
+  component will be used in other pages/sections, keep them in
+  `@/components/component-name/index.tsx`.
 
 ---
 
