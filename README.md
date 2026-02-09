@@ -157,6 +157,7 @@ type(scope): short description
 - fix(officer-profile): fix header alignment
 - chore(tailwind): add color-brand-\* classes
 - feat(layout): add navbar
+- chore(assets): add gdgoc-logo-vertical-light.png
 
 ---
 
