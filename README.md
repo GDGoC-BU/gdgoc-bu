@@ -8,21 +8,6 @@ Please read this entire guide before starting any work.
 
 ---
 
-## Table of Contents
-
-- Project Overview
-- Tech Stack
-- Project Setup
-- Development Workflow
-- Branching Conventions
-- Commit Message Conventions
-- Pull Request Guidelines
-- Coding Conventions
-- General Best Practices
-- Getting Help
-
----
-
 ## Tech Stack
 
 - TypeScript
@@ -70,29 +55,34 @@ App runs at http://localhost:3000
 
 ### Development Workflow
 
-1. Create a branch from `main` and follow the branch naming conventions below
-2. Make focused commits and messages should adhere to the commit convetions
-   below
-3. Open a Pull Request
-4. Address the PR review
-5. Maintaner will delete the branch in remote
-6. Run `git fetch -p` locally to sync your branch locally
+1. Run `git fetch -p` to sync your branch locally
+2. Run `git checkout main` to ensure that you are on the main branch
+3. Run `git pull origin main` to fetch any changes from the `main` branch
+4. Run `git switch -c branch-name` to create and switch to a new branch
+5. Branch name should follow the branch naming convetions below
+6. Do your contribution. Make focused commits, and messages should adhere to the
+   commit convetions below
+7. Once the contribution is complete, run `git push origin branch-name` to push
+   your branch to remote
+8. Open Github, visit the repo, and create a pull request
+9. Wait for the PR to be merged and address the PR review if there is any
+10. Maintaner will delete the branch in remote
 
 ---
 
 ## Branching Conventions
 
-Main branch:
+### Main branch:
 
 - `main` ( stable & protected. No work should be done here directly! )
 
-Branch format:
+### Branch format:
 
 ```
 <type>/<short-description>
 ```
 
-Allowed types:
+### Allowed types:
 
 - feat
 - fix
@@ -100,9 +90,11 @@ Allowed types:
 - docs
 - refactor
 
-Description should be in kebab-case
+### Description
 
-Examples:
+- should be in kebab-case
+
+### Examples:
 
 - feat/add-navbar
 - feat/add-officer-profile
@@ -115,13 +107,13 @@ Examples:
 Follow the
 [Angular Commit Convention](https://www.conventionalcommits.org/en/v1.0.0-beta.4/).
 
-Format:
+### Format:
 
 ```
 type(scope): short description
 ```
 
-Allowed types:
+### Allowed types:
 
 - chore (general)
 - feat (should only be made when an actual feature/component was made)
@@ -130,7 +122,7 @@ Allowed types:
 - refactor
 - build (adding/modifying dependencies)
 
-Scope:
+### Scope:
 
 - page
 - component
@@ -139,16 +131,16 @@ Scope:
 - if a commit affects multiple scopes, use the outermost scope. E.g:
   "feat(events): add events-card to past event section"
 
-Description:
+### Description:
 
 - Imperative
 - Present tense
 
-When to commit?:
+### When to commit?:
 
 - Make commits granular (per task), but not too small.
 
-Examples:
+### Examples:
 
 - feat(home): add hero section
 - fix(navbar): resolve mobile toggle issue
