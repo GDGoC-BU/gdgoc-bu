@@ -24,7 +24,9 @@
    Classes defined in @layer utilities are class combinations. Use them, don't recreate your
    own. Structure related styles can such as padding, display, margins, etc. shall be taken from
    the default tailwind classes, but branding related styles such as colors should be taken from
-   the custom classes. This allows us to easily change styles in the future, without code hunting.  */
+   the custom classes. This allows us to easily change styles in the future, without code hunting.  
+   
+   View the temporary localhost:3000/design page to see the brand classes in action!*/
 
 /* ======================================================= */
 

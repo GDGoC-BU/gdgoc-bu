@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import { Google_Sans_Flex } from 'next/font/google';
 import '@/styles/globals.css';
-import Navbar from './_sections/navbar';
-import Footer from './_sections/footer';
+import Navbar from './navbar';
+import Footer from './footer';
 
 const googleSansFlex = Google_Sans_Flex({
   variable: '--font-google-sans-flex',

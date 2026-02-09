@@ -175,6 +175,8 @@ type(scope): short description
 ## Coding Conventions
 
 - Strict TypeScript
+- Variable names should be in full, don't mind if it gets long. E.g:
+  OfficersDirectory not OfficersDir
 - ALWAYS use regular functions (components, utils, nested functions, etc.)! Only
   use arrow functions for callbacks or any particular `this` syntax
 - File names in kebab-case, function/variable names in camelCase
@@ -200,9 +202,10 @@ type(scope): short description
   not that complex (e.g: a nav link of the navbar), define them BELOW the
   section's main component.
 
-- To fully grasp the coding convetions, briefly study the codebase and how
-  everything is structured. This will give you atual examples of the convetions
-  mentioned above.
+- To fully grasp the coding convetions, briefly study the codebase and infer
+  "obvious convetions" that were not mentioned, especially the `@/app` folder.
+  You will see how everything is structured, and will give you actual examples
+  of the convetions mentioned above.
 
 ---
 
