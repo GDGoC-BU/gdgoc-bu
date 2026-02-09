@@ -217,7 +217,9 @@ type(scope): short description
 
 ## Getting Help
 
-Search online sources, but if no solution was found, ask in the messenger group
+Always communicate the progress of your contribution and try to stay within the
+allotted time as other contributions might depend on yours. If you are stuck,
+search online sources. But if no solution was found, ask in the messenger group
 chat or pm the Software Engineer Lead.
 
 Thank you for contributing!
