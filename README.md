@@ -55,7 +55,7 @@ App runs at http://localhost:3000
 
 ### Development Workflow
 
-1. Run `git fetch -p` to sync your branch locally
+1. Run `git fetch -p` to sync your local repo
 2. Run `git checkout main` to ensure that you are on the main branch
 3. Run `git pull origin main` to fetch any changes from the `main` branch
 4. Run `git switch -c branch-name` to create and switch to a new branch
@@ -66,7 +66,8 @@ App runs at http://localhost:3000
    your branch to remote
 8. Open Github, visit the repo, and create a pull request
 9. Wait for the PR to be merged and address the PR review if there is any
-10. Maintaner will delete the branch in remote
+10. Maintaner will delete the branch in remote after merging
+11. Run `git branch -d branch-name` to delete the branch locally. ONLY DELETE IF THE BRANCH HAS BEEN MERGED! You will lose your work
 
 ---
 
