@@ -23,7 +23,10 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={`${googleSansFlex.variable} light antialiased`}>
-        {children}
+        <nav className='brand-border border-x-0! border-t-0! px-4 py-4'>
+          navbar
+        </nav>
+        <main>{children}</main>
       </body>
     </html>
   );

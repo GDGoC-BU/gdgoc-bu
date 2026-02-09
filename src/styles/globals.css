@@ -4,7 +4,8 @@
 /*                         README                         */
 /* ======================================================= */
 
-/* brand-* utilities:
+/* brand-* classes:
+   - reusable classes that hold the branding values
    - encode global brand design decisions
    - should be usable anywhere
    - should remain few and stable
@@ -68,6 +69,10 @@
 @layer utilities {
   .brand-border {
     @apply border-brand-black-200 border-2;
+  }
+
+  .brand-width-container {
+    @apply mx-auto w-full max-w-[1400px] px-4;
   }
 }
 
