@@ -67,7 +67,8 @@ App runs at http://localhost:3000
 8. Open Github, visit the repo, and create a pull request
 9. Wait for the PR to be merged and address the PR review if there is any
 10. Maintaner will delete the branch in remote after merging
-11. Run `git branch -d branch-name` to delete the branch locally. ONLY DELETE IF THE BRANCH HAS BEEN MERGED! You will lose your work
+11. Run `git branch -d branch-name` to delete the branch locally. ONLY DELETE IF
+    THE BRANCH HAS BEEN MERGED! You will lose your work
 
 ---
 
@@ -100,6 +101,13 @@ App runs at http://localhost:3000
 - feat/add-navbar
 - feat/add-officer-profile
 - fix/footer-alignment
+
+### Notes:
+
+- Always delete your local branch AFTER it has been merged to keep your local
+  codebase clean. It will also be deleted in remote by the maintainers.
+- ONLY DELETE AFTER THE BRANCH HAS BEEN MERGED to `main`. Else you will lose all
+  your work in that branch.
 
 ---
 
