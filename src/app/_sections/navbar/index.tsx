@@ -4,10 +4,14 @@ export default function Navbar() {
       <div>logo</div>
       <nav>
         <ul>
-          <li>1</li>
-          <li>2</li>
+          <NavLink>1</NavLink>
+          <NavLink>2</NavLink>
         </ul>
       </nav>
     </header>
   );
+}
+
+function NavLink({ children }: ComponentChildrenProp) {
+  return <li>{children}</li>;
 }

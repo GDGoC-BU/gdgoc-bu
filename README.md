@@ -191,11 +191,17 @@ type(scope): short description
   through its README
 - Review the `@/app` structure. Sections of a page will be separated into their
   own component/file and used in that page. The page component SHOULD stay lean
-  and orchestrate its sections. Sub-components of sections that are only used in
-  that section shall be placed inside its section folder. E.g:
+  and orchestrate its sections. Complex sub-components of sections that are only
+  used in that section shall be placed inside its section folder. E.g:
   `@/app/about-us/_sections/officer-directory/officer-profile.tsx`. If a
   component will be used in other pages/sections, keep them in
-  `@/components/component-name/index.tsx`.
+  `@/components/component-name/index.tsx`. If a sub-component of a section is
+  not that complex (e.g: a nav link of the navbar), define them BELOW the
+  section's main component.
+
+- To fully grasp the coding convetions, briefly study the codebase and how
+  everything is structured. This will give you atual examples of the convetions
+  mentioned above.
 
 ---
 
