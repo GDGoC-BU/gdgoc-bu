@@ -182,6 +182,10 @@ type(scope): short description
   file and put it inside the `_section` sub-folder inside the page's folder.
   Main page: `@/src/app/about-us/page.tsx`, extracted component:
   `/src/app/events/_sections/officers-directory/officer-profile.tsx`
+- When contributing a component that is not yet implemented in pages, add it to
+  a page to test the component. After completing the component, take a
+  screenshot of the component and remove it from the page. Attach screenshot in
+  the PR so maintainers can immediately see the component visually.
 
 ---
 
