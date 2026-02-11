@@ -175,6 +175,7 @@ type(scope): short description
 ## Coding Conventions
 
 - Strict TypeScript
+- Don't add dependencies without maintainer approval
 - Variable names should be in full, don't mind if it gets long. E.g:
   OfficersDirectory not OfficersDir
 - ALWAYS use regular functions (components, utils, nested functions, etc.)! Only
