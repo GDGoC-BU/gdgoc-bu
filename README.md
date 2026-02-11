@@ -133,12 +133,15 @@ type(scope): short description
 
 ### Scope:
 
-- page
-- component
-- dependency
+Allowed Scopes:
+
+- <page-name>-page
+- <component>
+- <dependency>
+
 - should be consistent with other scopes (use the file/folder name)
-- if a commit affects multiple scopes, use the outermost scope. E.g:
-  "feat(events): add events-card to past event section"
+- if a change happens on multiple scopes, use the outermost scope. E.g:
+  "feat(events-page): add events-card to events page"
 
 ### Description:
 
@@ -151,7 +154,7 @@ type(scope): short description
 
 ### Examples:
 
-- feat(home): add hero section
+- feat(home-page): add hero section
 - fix(navbar): resolve mobile toggle issue
 - feat(button): add button component
 - fix(officer-profile): fix header alignment
