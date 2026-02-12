@@ -137,6 +137,7 @@ type(scope): short description
 Allowed Scopes:
 
 - <page-name>-page
+- <page-name>-page-<section-name>-section
 - <component>
 - <dependency>
 
@@ -162,6 +163,7 @@ Allowed Scopes:
 - chore(tailwind): add color-brand-\* classes
 - feat(layout): add navbar
 - chore(assets): add gdgoc-logo-vertical-light.png
+- feat(home-page-vision-section): add vision section
 
 ---
 
