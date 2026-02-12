@@ -13,8 +13,7 @@ const googleSansFlex = Google_Sans_Flex({
 
 export const metadata: Metadata = {
   title: 'GDGoC Bicol University',
-  description:
-    'Main website of Google Developers Group on Campus Bicol University'
+  description: ''
 };
 
 export default function RootLayout({
