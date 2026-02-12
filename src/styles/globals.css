@@ -101,7 +101,7 @@
     @apply mx-auto w-full max-w-[1400px] px-4;
   }
 
-  /* .text-gradient {
+  .button-gradient-container {
     background: linear-gradient(
       to right,
       #ea4335,
@@ -112,19 +112,28 @@
       #f9ab00,
       #ea4335
     );
-    background-size: 200%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     animation: animate-text-gradient 5s linear infinite;
-  } */
+    background-size: 200%;
+
+    @apply rounded-full;
+  }
+  .button-gradient {
+    mix-blend-mode: screen;
+    @apply rounded-full;
+  }
 }
 
-/* @keyframes animate-text-gradient {
+@keyframes animate-button-gradient {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes animate-text-gradient {
   to {
     background-position: 200%;
   }
-} */
+}
 
 body {
   background: var(--background);
