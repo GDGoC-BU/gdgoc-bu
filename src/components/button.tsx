@@ -11,8 +11,6 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: 'bg-background text-foreground',
-
         'black-outline':
           'hover:bg-brand-black-200/5 bg-background border-2 border-brand-black-200 text-brand-black-200',
 
@@ -24,6 +22,8 @@ const buttonVariants = cva(
           'hover:bg-brand-yellow-300/5 bg-background border-2 border-brand-yellow-300 text-brand-yellow-300',
         'red-outline':
           'hover:bg-brand-red-300/5 bg-background border-2 border-brand-red-300 text-brand-red-300',
+
+        'gradient-outline': 'button-gradient bg-background text-foreground',
 
         'blue-solid-primary':
           'hover:bg-brand-blue-300/80 bg-brand-blue-300 text-foreground border-2 brand-border',
@@ -59,12 +59,34 @@ function Button({
   variant,
   size,
   asChild = false,
+  // disabled,
   ...props
 }: React.ComponentProps<'button'> &
   VariantProps<typeof buttonVariants> & {
     asChild?: boolean;
   }) {
   const Component = asChild ? Slot : 'button';
+
+  if (variant === 'gradient-outline') {
+    return (
+      <div
+        className={cn(
+          'button-gradient-container hover:[animation-play-state:paused]',
+          props.disabled ? 'animate-none! opacity-50' : ''
+        )}
+      >
+        <Component
+          data-slot='button'
+          className={cn(
+            'text-foreground font-sans text-[20px] leading-[28px] font-[500] tracking-[0%]',
+            buttonVariants({ variant, size, className }),
+            'm-[2px] px-6 py-[9px] disabled:w-[calc(100%-4px)] disabled:opacity-100'
+          )}
+          {...props}
+        />
+      </div>
+    );
+  }
 
   return (
     <Component

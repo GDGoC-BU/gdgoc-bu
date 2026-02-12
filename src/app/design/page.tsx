@@ -34,7 +34,7 @@ const bgColorClassNames = [
 ];
 
 const buttonVariants = [
-  ['black-outline'],
+  ['black-outline', 'gradient-outline'],
   ['blue-outline', 'green-outline', 'yellow-outline', 'red-outline'],
   [
     'blue-solid-primary',
