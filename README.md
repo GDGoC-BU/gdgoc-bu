@@ -64,7 +64,8 @@ App runs at http://localhost:3000
    commit convetions below
 7. Once the contribution is complete, run `git push origin branch-name` to push
    your branch to remote
-8. Open Github, visit the repo, and create a pull request
+8. Open Github, visit the repo, create a pull request, and add
+   `@michaelcanonizado` as a reviewer (top right of PR creation)
 9. Wait for the PR to be merged and address the PR review if there is any
 10. Maintaner will delete the branch in remote after merging
 11. Run `git branch -d branch-name` to delete the branch locally. ONLY DELETE IF
