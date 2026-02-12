@@ -25,14 +25,23 @@ const buttonVariants = cva(
         'red-outline':
           'hover:bg-brand-red-300/5 bg-background border-2 border-brand-red-300 text-brand-red-300',
 
-        'blue-solid':
-          'hover:bg-brand-blue-300/80 bg-brand-blue-300 text-foreground border-2 brand-border text-background',
-        'green-solid':
-          'hover:bg-brand-green-300/80 bg-brand-green-300 text-foreground border-2 brand-border text-background',
-        'yellow-solid':
-          'hover:bg-brand-yellow-300/80 bg-brand-yellow-300 text-foreground border-2 brand-border text-background',
-        'red-solid':
-          'hover:bg-brand-red-300/80 bg-brand-red-300 text-foreground border-2 brand-border text-background'
+        'blue-solid-primary':
+          'hover:bg-brand-blue-300/80 bg-brand-blue-300 text-foreground border-2 brand-border',
+        'green-solid-primary':
+          'hover:bg-brand-green-300/80 bg-brand-green-300 text-foreground border-2 brand-border',
+        'yellow-solid-primary':
+          'hover:bg-brand-yellow-300/80 bg-brand-yellow-300 text-foreground border-2 brand-border',
+        'red-solid-primary':
+          'hover:bg-brand-red-300/80 bg-brand-red-300 text-foreground border-2 brand-border',
+
+        'blue-solid-secondary':
+          'hover:bg-brand-blue-200/80 bg-brand-blue-200 text-foreground border-2 brand-border',
+        'green-solid-secondary':
+          'hover:bg-brand-green-200/80 bg-brand-green-200 text-foreground border-2 brand-border',
+        'yellow-solid-secondary':
+          'hover:bg-brand-yellow-300/80 bg-brand-yellow-200 text-foreground border-2 brand-border',
+        'red-solid-secondary':
+          'hover:bg-brand-red-200/80 bg-brand-red-200 text-foreground border-2 brand-border'
       },
       size: {
         default: 'px-6 py-[9px]'

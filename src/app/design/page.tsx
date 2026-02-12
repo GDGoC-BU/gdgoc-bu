@@ -36,7 +36,18 @@ const bgColorClassNames = [
 const buttonVariants = [
   ['black-outline'],
   ['blue-outline', 'green-outline', 'yellow-outline', 'red-outline'],
-  ['blue-solid', 'green-solid', 'yellow-solid', 'red-solid']
+  [
+    'blue-solid-primary',
+    'green-solid-primary',
+    'yellow-solid-primary',
+    'red-solid-primary'
+  ],
+  [
+    'blue-solid-secondary',
+    'green-solid-secondary',
+    'yellow-solid-secondary',
+    'red-solid-secondary'
+  ]
 ] as const;
 
 export default function Design() {
