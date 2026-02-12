@@ -100,7 +100,31 @@
   .brand-width-container {
     @apply mx-auto w-full max-w-[1400px] px-4;
   }
+
+  /* .text-gradient {
+    background: linear-gradient(
+      to right,
+      #ea4335,
+      #f9ab00,
+      #34a853,
+      #4285f4,
+      #34a853,
+      #f9ab00,
+      #ea4335
+    );
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-text-gradient 5s linear infinite;
+  } */
 }
+
+/* @keyframes animate-text-gradient {
+  to {
+    background-position: 200%;
+  }
+} */
 
 body {
   background: var(--background);

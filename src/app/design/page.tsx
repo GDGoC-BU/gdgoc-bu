@@ -1,3 +1,4 @@
+import { Button } from '@/components/button';
 import {
   TextBody,
   TextSubheading,
@@ -32,10 +33,16 @@ const bgColorClassNames = [
   }
 ];
 
+const buttonVariants = [
+  ['black-outline'],
+  ['blue-outline', 'green-outline', 'yellow-outline', 'red-outline'],
+  ['blue-solid', 'green-solid', 'yellow-solid', 'red-solid']
+] as const;
+
 export default function Design() {
   return (
-    <div className='mx-auto flex min-h-screen w-full max-w-[1200px] flex-col items-center gap-20 py-20'>
-      <div className='brand-border flex h-fit w-full flex-col items-center rounded-2xl p-12 text-center'>
+    <div className='*:border-brand-black-200 brand-width-container mx-auto flex min-h-screen w-full flex-col items-center gap-20 py-20 *:rounded-2xl *:border-2 *:p-12'>
+      <div className='flex h-fit w-full flex-col items-center text-center'>
         <TextDisplay className='mb-2'>Typography Scale</TextDisplay>
         <TextHeading className='mb-4'>Heading</TextHeading>
         <TextSubheading className='max-w-[500px]'>Subheading</TextSubheading>
@@ -44,8 +51,8 @@ export default function Design() {
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </TextBody>
       </div>
-      <div className='brand-border flex h-fit w-full flex-col items-center gap-12 rounded-2xl p-12'>
-        <TextHeading>Brand Colors</TextHeading>
+      <div className='flex h-fit w-full flex-col items-center gap-12'>
+        <TextDisplay>Brand Colors</TextDisplay>
         <div className='flex flex-row gap-6'>
           {bgColorClassNames.map((color, index) => {
             return (
@@ -72,6 +79,33 @@ export default function Design() {
                     );
                   })}
                 </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+      <div className='flex h-fit w-full flex-col items-center gap-8'>
+        <TextDisplay>Buttons</TextDisplay>
+        <div className='flex flex-col gap-8'>
+          {buttonVariants.map((group, index) => {
+            return (
+              <div
+                key={index}
+                className={`flex flex-row flex-wrap justify-center gap-8`}
+              >
+                {group.map(variant => {
+                  return (
+                    <div
+                      key={variant}
+                      className='flex min-w-[175px] flex-col gap-2'
+                    >
+                      <Button variant={variant}>{variant}</Button>
+                      <Button variant={variant} disabled>
+                        disabled
+                      </Button>
+                    </div>
+                  );
+                })}
               </div>
             );
           })}
