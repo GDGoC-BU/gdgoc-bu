@@ -181,7 +181,10 @@ Allowed Scopes:
 - Strict TypeScript
 - Don't add dependencies without maintainer approval
 - Variable names should be in full, don't mind if it gets long. E.g:
-  OfficersDirectory not OfficersDir
+  officersDirectory not officersDir
+- camelCase for variables, snake-case for files. Component name should match
+  file name.
+- Use the custom tailwind classes defined in @/styles/globals.css
 - ALWAYS use regular functions (components, utils, nested functions, etc.)! Only
   use arrow functions for callbacks or any particular `this` syntax
 - File names in kebab-case, function/variable names in camelCase
