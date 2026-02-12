@@ -41,18 +41,7 @@ const buttonVariants = cva(
         'yellow-solid-secondary':
           'hover:bg-brand-yellow-300/80 bg-brand-yellow-200 text-foreground border-2 brand-border',
         'red-solid-secondary':
-          'hover:bg-brand-red-200/80 bg-brand-red-200 text-foreground border-2 brand-border',
-
-        // Decided to make "black-to-" variants to test out button hover states
-        'black-to-green':
-          'bg-background border-2 border-brand-black-200 text-brand-black-200 hover:border-brand-green-300 hover:text-brand-green-300',
-
-        'black-to-yellow':
-          'bg-background border-2 border-brand-black-200 text-brand-black-200 hover:border-brand-yellow-300 hover:text-brand-yellow-300',
-        'black-to-red':
-          'bg-background border-2 border-brand-black-200 text-brand-black-200 hover:border-brand-red-300 hover:text-brand-red-300',
-        'black-to-blue':
-          'bg-background border-2 border-brand-black-200 text-brand-black-200 hover:border-brand-blue-300 hover:text-brand-blue-300'
+          'hover:bg-brand-red-200/80 bg-brand-red-200 text-foreground border-2 brand-border'
       },
       size: {
         default: 'px-6 py-[9px]'
