@@ -140,6 +140,7 @@ Allowed Scopes:
 - <page-name>-page-<section-name>-section
 - <component>
 - <dependency>
+- <folder-name>
 
 - should be consistent with other scopes (use the file/folder name)
 - if a change happens on multiple scopes, use the outermost scope. E.g:
@@ -164,6 +165,7 @@ Allowed Scopes:
 - feat(layout): add navbar
 - chore(assets): add gdgoc-logo-vertical-light.png
 - feat(home-page-vision-section): add vision section
+- chore(public): add gdgoc-logo-main.png
 
 ---
 
