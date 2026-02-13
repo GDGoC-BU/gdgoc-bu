@@ -28,11 +28,11 @@ export default function Navbar() {
           <ul className="flex gap-10">
             <NavLink href="#hero">Home</NavLink>
             <NavLink href="#events">Events</NavLink>
-            <NavLink href="#gallery">Gallery</NavLink>
-            <NavLink href="#resources">Resources</NavLink>
-            <NavLink href="#membership">Membership</NavLink>
-            <NavLink href="#contact">Contact</NavLink>
-            <NavLink href="/about-us">About us</NavLink>
+            <NavLink href="#">Gallery</NavLink>
+            <NavLink href="#">Resources</NavLink>
+            <NavLink href="#">Membership</NavLink>
+            <NavLink href="#">Contact</NavLink>
+            <NavLink href="#">About us</NavLink>
           </ul>
         </nav>
       </div>
@@ -42,11 +42,11 @@ export default function Navbar() {
         <ul className="flex flex-col py-4">
           <NavLink href="#hero" onClick={() => setIsMenuOpen(false)}>Home</NavLink>
           <NavLink href="#events" onClick={() => setIsMenuOpen(false)}>Events</NavLink>
-          <NavLink href="#gallery" onClick={() => setIsMenuOpen(false)}>Gallery</NavLink>
-          <NavLink href="#resources" onClick={() => setIsMenuOpen(false)}>Resources</NavLink>
-          <NavLink href="#membership" onClick={() => setIsMenuOpen(false)}>Membership</NavLink>
-          <NavLink href="#contact" onClick={() => setIsMenuOpen(false)}>Contact</NavLink>
-          <NavLink href="/about-us" onClick={() => setIsMenuOpen(false)}>About us</NavLink>
+          <NavLink href="#" onClick={() => setIsMenuOpen(false)}>Gallery</NavLink>
+          <NavLink href="#" onClick={() => setIsMenuOpen(false)}>Resources</NavLink>
+          <NavLink href="#" onClick={() => setIsMenuOpen(false)}>Membership</NavLink>
+          <NavLink href="#" onClick={() => setIsMenuOpen(false)}>Contact</NavLink>
+          <NavLink href="#" onClick={() => setIsMenuOpen(false)}>About us</NavLink>
         </ul>
       </nav>
     </header>
