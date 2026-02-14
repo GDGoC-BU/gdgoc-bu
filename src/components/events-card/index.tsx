@@ -20,7 +20,7 @@ function EventsCard({
     }
 
     return (
-<div className="flex flex-col brand-border rounded-2xl overflow-hidden bg-background max-w-sm">
+      <div className="flex flex-col brand-border rounded-2xl overflow-hidden bg-background max-w-sm transform transition-all hover:-translate-y-2">
       {/* Image Section */}
       <div className="bg-brand-blue-100 p-10 flex justify-center items-center border-b-2 border-brand-black-200">
         {/* dito sa object cover, di ko sure so yan muna nilagay ko*/}
@@ -29,7 +29,7 @@ function EventsCard({
 
       {/* Content Section */}
       <div className="p-6 flex flex-col gap-2">
-        <h3 className="text-2xl font-bold text-brand-blue-300">{title}</h3>
+        <h3 className="text-2xl font-bold text-brand-blue-300 line-clamp-2" title={title}>{title}</h3>
         
         <p className="text-sm text-brand-black-200">
             <span className = 'font-bold'> {date}</span>
