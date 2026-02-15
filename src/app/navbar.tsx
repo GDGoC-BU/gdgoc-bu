@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useState } from 'react';
 
 export default function Navbar() {
@@ -7,14 +8,14 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 bg-background border-b border-b-gray-300">
-      <div className="flex items-center justify-between px-10 py-2">
+      <div className="flex items-center justify-between px-2.5 lg:px-10 py-2">
         <div className="w-68">
           <img src="/logos/gdgoc-logo-horizontal-light.png" alt="" />
         </div>
 
         {/* Hamburger button - visible on mobile only */}
         <button
-          className="md:hidden flex flex-col gap-1.5 p-2"
+          className="lg:hidden flex flex-col gap-1.5 p-2"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -24,7 +25,7 @@ export default function Navbar() {
         </button>
 
         {/* Desktop nav */}
-        <nav className="hidden md:block">
+        <nav className="hidden lg:block">
           <ul className="flex gap-10">
             <NavLink href="#hero">Home</NavLink>
             <NavLink href="#events">Events</NavLink>
@@ -38,7 +39,7 @@ export default function Navbar() {
       </div>
 
       {/* Mobile nav */}
-      <nav className={`md:hidden border-t border-t-gray-300 overflow-hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
+      <nav className={`lg:hidden border-t border-t-gray-300 overflow-hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
         <ul className="flex flex-col py-4">
           <NavLink href="#hero" onClick={() => setIsMenuOpen(false)}>Home</NavLink>
           <NavLink href="#events" onClick={() => setIsMenuOpen(false)}>Events</NavLink>
@@ -55,14 +56,14 @@ export default function Navbar() {
 
 function NavLink({ children, href, onClick }: ComponentChildrenProp & { href: string; onClick?: () => void }) {
   return (
-    <li className="md:inline-block">
-      <a
+    <li className="lg:inline-block">
+      <Link
         href={href}
         onClick={onClick}
-        className="block px-4 py-3 md:p-0 cursor-pointer font-medium hover:text-blue-500 transition-colors hover:border-b-blue-500 border-b-2 border-b-transparent"
+        className="block px-4 py-3 lg:p-0 cursor-pointer font-medium hover:text-blue-500 transition-colors hover:border-b-blue-500 border-b-2 border-b-transparent"
       >
         {children}
-      </a>
+      </Link>
     </li>
   );
 }
