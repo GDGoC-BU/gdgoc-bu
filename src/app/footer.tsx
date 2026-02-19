@@ -1,15 +1,16 @@
 import Link from "next/dist/client/link";
+import Image from "next/image";
 import { TextSubheading, TextBody } from "@/components/text";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   
-  return <footer className=" font-sans bg-white border-t border-gray-100">
+  return <footer className="brand-border border-x-0! border-t! border-b-0! bg-white">
       <div className="brand-width-container mx-auto px-6 py-12 flex flex-col md:flex-row justify-between gap-10">
         
         <div className="flex items-start gap-4">
-          <div className="h-16 md:h-20 lg:h-32">
-             <img src="/logos/gdgoc-logo-horizontal-light.png" alt="GDG Logo" className="h-full object-contain" />
+          <div className="relative h-16 md:h-20 lg:h-32 w-48 md:w-56 lg:w-80">
+             <Image src="/logos/gdgoc-logo-horizontal-light.png" alt="GDG Logo" fill className="object-contain" />
           </div>
         </div> 
 
@@ -20,32 +21,32 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link href="/" className="hover:text-gray-600 flex items-center gap-1">
-                  <span className="text-gray-400">&gt;</span> <TextBody>About Us</TextBody>
+                  <TextBody>&gt; About Us</TextBody>
                 </Link>
               </li>
               <li>
                 <Link href="/" className="hover:text-gray-600 flex items-center gap-1">
-                  <span className="text-gray-400">&gt;</span> <TextBody>Events</TextBody>
+                  <TextBody>&gt; Events</TextBody>
                 </Link>
               </li>
               <li>
                 <Link href="/" className="hover:text-gray-600 flex items-center gap-1">
-                  <span className="text-gray-400">&gt;</span> <TextBody>Gallery</TextBody>
+                  <TextBody>&gt; Gallery</TextBody>
                 </Link>
               </li>
               <li>
                 <Link href="/" className="hover:text-gray-600 flex items-center gap-1">
-                  <span className="text-gray-400">&gt;</span> <TextBody>Resources</TextBody>
+                  <TextBody>&gt; Resources</TextBody>
                 </Link>
               </li>
               <li>
                 <Link href="/" className="hover:text-gray-600 flex items-center gap-1">
-                  <span className="text-gray-400">&gt;</span> <TextBody>Membership</TextBody>
+                  <TextBody>&gt; Membership</TextBody>
                 </Link>
               </li>
               <li>
                 <Link href="/" className="hover:text-gray-600 flex items-center gap-1">
-                  <span className="text-gray-400">&gt;</span> <TextBody>Contact Us</TextBody>
+                  <TextBody>&gt; Contact Us</TextBody>
                 </Link>
               </li>
             </ul>
@@ -55,16 +56,24 @@ export default function Footer() {
           <TextSubheading className="mb-4">Social</TextSubheading>
           <div className="flex flex-col sm:flex-row gap-4 ">
             <Link href="#" className="hover:opacity-70 transition-opacity">
-              <img src="/logos/socials/mail.svg" alt="Email" className="h-10" />
+              <div className="relative w-11 h-10">
+                <Image src="/logos/socials/mail.svg" alt="Email" fill className="object-contain" />
+              </div>
             </Link>
             <Link href="#" className="hover:opacity-70 transition-opacity">
-              <img src="/logos/socials/linkedin-logo.svg" alt="LinkedIn" className="w-10 h-10" />
+              <div className="relative w-10 h-10">
+                <Image src="/logos/socials/linkedin-logo.svg" alt="LinkedIn" fill className="object-contain" />
+              </div>
             </Link>
             <Link href="#" className="hover:opacity-70 transition-opacity">
-              <img src="/logos/socials/facebook-logo.svg" alt="Facebook" className="w-10 h-10" />
+              <div className="relative w-10 h-10">
+                <Image src="/logos/socials/facebook-logo.svg" alt="Facebook" fill className="object-contain" />
+              </div>
             </Link>
             <Link href="#" className="hover:opacity-70 transition-opacity">
-              <img src="/logos/socials/instagram-logo.svg" alt="Instagram" className="w-10 h-10" />
+              <div className="relative w-10 h-10">
+                <Image src="/logos/socials/instagram-logo.svg" alt="Instagram" fill className="object-contain" />
+              </div>
             </Link>
           </div>
         </div>

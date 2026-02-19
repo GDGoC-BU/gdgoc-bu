@@ -1,16 +1,18 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
+import { TextBody } from '@/components/text';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 bg-background border-b border-b-gray-300">
-      <div className="flex items-center justify-between px-2.5 lg:px-10 py-2">
+      <div className="brand-width-container flex items-center justify-between px-2.5 lg:px-10 py-2">
         <div className="w-68">
-          <img src="/logos/gdgoc-logo-horizontal-light.png" alt="" />
+          <Image src="/logos/gdgoc-logo-horizontal-light.png" alt="GDGOC Logo" width={320} height={80} className="object-contain" />
         </div>
 
         {/* Hamburger button - visible on mobile only */}
@@ -60,9 +62,9 @@ function NavLink({ children, href, onClick }: ComponentChildrenProp & { href: st
       <Link
         href={href}
         onClick={onClick}
-        className="block px-4 py-3 lg:p-0 cursor-pointer font-medium hover:text-blue-500 transition-colors hover:border-b-blue-500 border-b-2 border-b-transparent"
+        className="block px-4 py-3 lg:p-0 cursor-pointer font-medium"
       >
-        {children}
+        <TextBody className="text-[16px] font-medium  hover:text-brand-blue-300 transition-colors hover:border-b-brand-blue-300 border-b-2 border-b-transparent">{children}</TextBody>
       </Link>
     </li>
   );
